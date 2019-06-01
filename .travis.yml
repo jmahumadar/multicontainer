@@ -18,9 +18,11 @@ after_success:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
 # Take these images to Docker Hub
+
 - docker push jmahumada/multi_client
 - docker push jmahumada/multi_nginx
 - docker push jmahumada/multi_api
 - docker push jmahumada/multi_worker
 
+#trying to make it work
 
