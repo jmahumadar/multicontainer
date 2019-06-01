@@ -13,6 +13,7 @@ after_success:
   - docker build -t jmahumada/multi_nginx ./nginx
   - docker build -t jmahumada/multi_api ./api
   - docker build -t jmahumada/multi_worker ./worker
+  - docker build -t jmahumada/multi_client ./client
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
@@ -20,6 +21,7 @@ after_success:
   - docker push jmahumada/multi_nginx
   - docker push jmahumada/multi_api
   - docker push jmahumada/multi_worker
+  - docker push jmahumada/multi_client
 
 
 
