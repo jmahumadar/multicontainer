@@ -23,5 +23,4 @@ after_success:
 - docker push jmahumada/multi_api
 - docker push jmahumada/multi_worker
 
-# just to see if works ok again
 
