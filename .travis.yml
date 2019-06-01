@@ -12,17 +12,14 @@ after_success:
   - docker build -t jmahumada/multi_client ./client
   - docker build -t jmahumada/multi_nginx ./nginx
   - docker build -t jmahumada/multi_api ./api
-  - docker build -t jmahumada/multi_worker ./worker
+  - docker build -t jmahumada/multi_worker ./worke
 
-#Log in to Docker CLI
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-# Take these images to Docker Hub
+  - docker push jmahumada/multi_client
+  - docker push jmahumada/multi_nginx
+  - docker push jmahumada/multi_api
+  - docker push jmahumada/multi_worker
 
-- docker push jmahumada/multi_client
-- docker push jmahumada/multi_nginx
-- docker push jmahumada/multi_api
-- docker push jmahumada/multi_worker
 
-#trying to make it work for third time
 
