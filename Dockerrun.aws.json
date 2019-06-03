@@ -10,7 +10,7 @@
         },
 
         {
-            "name": "api",
+            "name": "server",
             "image": "jmahumada/multi_api",
             "hostname": "api",
             "essential": false,
